@@ -1,0 +1,7 @@
+---
+- name: sshd config
+  template: src=sshd_config.j2 dest=/etc/ssh/sshd_config owner=root group=wheel mode=400
+  when: sshd_is_enabled
+  notify:
+    - restart sshd
+  tags: sshd

@@ -1,0 +1,19 @@
+sshd_is_enabled: True
+
+sshd_config_main:
+  ListenAddress:
+    - 0.0.0.0
+    - '::'
+  VersionAddendum: ''
+  PermitRootLogin: without-password
+  ChallengeResponseAuthentication: 'no'
+  AllowAgentForwarding: 'no'
+  AllowTcpForwarding: 'no'
+  X11Forwarding: 'no'
+  ClientAliveInterval: 30
+  ClientAliveCountMax: 3
+
+sshd_config_matches: []
+#  - match: User someuser
+#    block:
+#      X11Forwarding: 'no'
